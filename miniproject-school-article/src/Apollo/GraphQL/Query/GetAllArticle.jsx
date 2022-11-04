@@ -1,11 +1,13 @@
 import { gql } from "@apollo/client";
 
 export const GET_ARTICLE = gql`
-  query GetArticle {
-    miniProject_artikel(where: { user_id: { _eq: 1 } }) {
+  query GetArticle($id: Int!) {
+    miniProject_artikel(where: { id: { _eq: $id } }) {
       artikel_title
       artikel_content
       author
+      created_at
+      updated_at
       user_id
       id
     }
