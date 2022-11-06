@@ -1,12 +1,39 @@
-import { Dropdown, Navbar } from "flowbite-react";
+import { Navbar } from "flowbite-react";
+import { Outlet, useNavigate } from "react-router-dom";
 import tutWuri from "../../Assets/img/TutWuriHandayani.png";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+import loginStatus from "../../Utils/auth";
 
 export const AdminHeader = () => {
+  const MySwal = withReactContent(Swal);
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    MySwal.fire({
+      title: "Are you sure to Logout?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          icon: "success",
+          title: "Logout Success",
+        });
+        loginStatus.setLogout(navigate);
+      }
+    });
+  };
+
   return (
     <>
       <Navbar
         style={{ backgroundColor: "#D1BEBE" }}
-        className="sticky top-0 z-10"
+        className="sticky top-0 z-10 shadow-lg"
       >
         <Navbar.Brand>
           <img src={tutWuri} className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
@@ -19,36 +46,16 @@ export const AdminHeader = () => {
           <Navbar.Link href="/secret-admin" className="hover:text-white">
             Dashboard
           </Navbar.Link>
-          <Dropdown arrowIcon={true} inline={true} label={"Artikel"}>
-            <Dropdown.Item>
-              <Navbar.Link href="/secret-admin/addArticle">
-                Add Artikel
-              </Navbar.Link>
-            </Dropdown.Item>
-            <Dropdown.Item>
-              <Navbar.Link href="/secret-admin/editArticle">
-                Edit Artikel
-              </Navbar.Link>
-            </Dropdown.Item>
-          </Dropdown>
-          <Dropdown arrowIcon={true} inline={true} label={"Galeri"}>
-            <Dropdown.Item>
-              <Navbar.Link href="/secret-admin/addGallery">
-                Add Galeri
-              </Navbar.Link>
-            </Dropdown.Item>
-            <Dropdown.Item>
-              <Navbar.Link href="/secret-admin/editGallery">
-                Edit Galeri
-              </Navbar.Link>
-            </Dropdown.Item>
-          </Dropdown>
-
-          <Navbar.Link href="/" className="hover:text-white">
-            Go To HomePage
+          <Navbar.Link href="/secret-admin/mainArticlePage">
+            Artikel
+          </Navbar.Link>
+          <Navbar.Link href="/secret-admin/addGallery">Add Galeri</Navbar.Link>
+          <Navbar.Link onClick={handleLogout} className="cursor-pointer">
+            Logout
           </Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
+      <Outlet />
     </>
   );
 };
