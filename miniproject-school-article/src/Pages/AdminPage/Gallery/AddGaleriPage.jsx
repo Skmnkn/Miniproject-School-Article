@@ -3,10 +3,10 @@ import { useState } from "react";
 import { storage } from "../../../Firebase/firebase-config";
 import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 import { useMutation } from "@apollo/client";
-import { INSERT_GALLERY } from "../../../Apollo/GraphQL/Mutation/InsertGallery";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import { Helmet } from "react-helmet";
+import { INSERT_GALLERY } from "../../../Apollo/GraphQL";
 
 const MySwal = withReactContent(Swal);
 
@@ -39,7 +39,7 @@ export const AddGalleryPage = () => {
       },
     });
     MySwal.fire({
-      title: "Artikel Ditambahkan",
+      title: "Gambar Ditambahkan",
       icon: "success",
     });
   };
