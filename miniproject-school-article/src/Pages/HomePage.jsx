@@ -7,16 +7,14 @@ import {
   faUniversity,
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
-import { useEffect } from "react";
-import { useQuery } from "@apollo/client";
-import { GET_ARTICLE } from "../Apollo/GraphQL";
+import { useSubscription } from "@apollo/client";
+import Moment from "react-moment";
+import { GET_SUBSCRIPTION_ARTICLE_LIMIT } from "../Apollo/GraphQL/Subscription/GetSubscriptionArticleLimit";
 
 export const HomePage = () => {
-  const { data: getArticleData } = useQuery(GET_ARTICLE);
-
-  useEffect(() => {
-    document.title = "SD Negeri Lokasari";
-  }, []);
+  const { data: getArticleData } = useSubscription(
+    GET_SUBSCRIPTION_ARTICLE_LIMIT
+  );
 
   return (
     <>
@@ -84,16 +82,20 @@ export const HomePage = () => {
         <h1 className="text-center bg-slate-800 text-3xl font-roboto text-white">
           Artikel
         </h1>
-        <div className="py-3 container gap-x-12 flex justify-between">
+        <div className="py-3 container gap-x-10 flex flex-wrap justify-between ">
           {getArticleData?.miniProject_artikel.map(
-            ({ artikel_title, artikel_content, id }) => (
-              <div className="py-7 cursor-pointer" key={id}>
-                <div className="max-w-lg hover:bg-slate-200 p-3 rounded-md">
+            ({ artikel_title, artikel_content, id, updated_at }) => (
+              <div className="cursor-pointer " key={id}>
+                <div className=" hover:bg-slate-200 p-3 rounded-md max-w-xs ">
                   <h1 className="text-2xl font-roboto pb-5">{artikel_title}</h1>
                   <p className="font-roboto text-justify line-clamp-5">
                     {artikel_content}
                   </p>
-                  <p className="italic text-end">24 Oktober 2022</p>
+                  <p className="italic text-end py-2">
+                    <Moment format="Do MMMM YYYY">{updated_at}</Moment>
+                    <br />
+                    <Moment format="hh:mm:ss">{updated_at}</Moment>
+                  </p>
                 </div>
               </div>
             )
