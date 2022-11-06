@@ -1,4 +1,5 @@
 import { Navbar } from "flowbite-react";
+import { Link } from "react-router-dom";
 import tutWuri from "../Assets/img/TutWuriHandayani.png";
 
 export const ArticleHeader = () => {
@@ -6,17 +7,19 @@ export const ArticleHeader = () => {
     <>
       <Navbar
         style={{ backgroundColor: "#D1BEBE" }}
-        className="sticky top-0 z-10"
+        className="sticky top-0 z-10 shadow-lg"
       >
         <Navbar.Brand>
-          <img src={tutWuri} className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
-          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-            SD NEGERI LOKASARI
-          </span>
+          <img src={tutWuri} className="mr-3 h-6 sm:h-9" alt="Logo Sekolah" />
+          <Link to="/">
+            <span className="self-center text-xl font-semibold">
+              SD NEGERI LOKASARI
+            </span>
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse>
-          <Navbar.Link href="/" className="hover:text-white">
+          <Navbar.Link href="/" className="hover:bg-red-600">
             Home
           </Navbar.Link>
           <Navbar.Link href="/article">Artikel</Navbar.Link>

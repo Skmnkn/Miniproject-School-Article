@@ -48,7 +48,7 @@ export const ArticleFooter = () => {
                 </button>
               </div>
               <div className="pt-6 px-auto underline hover:text-[#D1BEBE]">
-                <Link to="/secret-admin">Admin Page</Link>
+                <Link to="/loginPage">Admin Page</Link>
               </div>
             </div>
             <div className="lg:w-6/12 px-4 flex flex-wrap justify-end">
