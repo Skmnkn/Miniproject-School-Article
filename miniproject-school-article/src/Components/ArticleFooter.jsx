@@ -10,9 +10,9 @@ import { Link } from "react-router-dom";
 export const ArticleFooter = () => {
   return (
     <>
-      <footer className="relative bg-slate-800 pt-8 pb-6 container text-white">
+      <footer className="relative bg-slate-800 pt-8 pb-6 text-white">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap text-left lg:text-left justify-between">
+          <div className="container flex flex-wrap text-left lg:text-left justify-between">
             <div className="lg:w-6/12">
               <h4 className="text-3xl fonat-semibold  mb-3 font-semibold">
                 Alamat
