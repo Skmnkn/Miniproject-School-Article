@@ -11,6 +11,8 @@ and some Javascript libraries.
 
 Why I chose this theme is because I am working on a mini project at Alterra Academy while completing project assignments on my campus with the same assignment and title.
 
+## [Link Deployment Website Artikel Sekolah](https://sdlokasaridev.netlify.app/)
+
 ## Screenshot of this project
 
 ### View for User
