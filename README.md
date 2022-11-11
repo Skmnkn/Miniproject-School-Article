@@ -19,34 +19,34 @@ Why I chose this theme is because I am working on a mini project at Alterra Acad
 
 #### Home Page
 
-![Alt text](../../../A:/CODE/Miniproject/screenshots/HomePage.jpeg)
+![HomePage](https://user-images.githubusercontent.com/78061511/200196523-9a0bfa33-2623-49b8-8c09-6bb2b8a8fca0.jpeg)
 
 #### Artikel Page
 
-![Alt text](../../../A:/CODE/Miniproject/screenshots/ArtikelPage.jpeg)
+![ArtikelPage](https://user-images.githubusercontent.com/78061511/200196530-a55a6820-df91-4feb-8fb5-f762cc48dae9.jpeg)
 
 #### Artikel Detail Page
 
-![Alt text](../../../A:/CODE/Miniproject/screenshots/ArtikelDetail.jpeg)
+![ArtikelDetail](https://user-images.githubusercontent.com/78061511/200196537-038530f8-db97-45db-8e23-f744660751c0.jpeg)
 
 #### Galeri Page
 
-![Alt text](../../../A:/CODE/Miniproject/screenshots/GaleriPage.jpeg)
+![GaleriPage](https://user-images.githubusercontent.com/78061511/200196546-2f5f9637-3900-47f7-8145-3fcbf9d72219.jpeg)
 
 #### View for Admin
 
 ### Login Page
 
-![Alt text](../../../A:/CODE/Miniproject/screenshots/LoginPage.jpeg)
+![LoginPage](https://user-images.githubusercontent.com/78061511/200196551-b701df7c-dc85-46b8-baee-87e37a052fc6.jpeg)
 
 ### Dashboard
 
-![Alt text](../../../A:/CODE/Miniproject/screenshots/Dashboard.jpeg)
+![Dashboard](https://user-images.githubusercontent.com/78061511/200196561-ab373b80-26dc-4f70-9e14-7a0a3123874d.jpeg)
 
 ### Manage Artikel
 
-![Alt text](../../../A:/CODE/Miniproject/screenshots/ManageArtikel.jpeg)
+![ManageArtikel](https://user-images.githubusercontent.com/78061511/200196575-27256a4b-783e-4e01-b3eb-54b2cad83310.jpeg)
 
 ### Add Galeri
 
-![Alt text](../../../A:/CODE/Miniproject/screenshots/AddGaleri.jpeg)
+![AddGaleri](https://user-images.githubusercontent.com/78061511/200196585-b2b64f65-8225-4505-a19f-ede8d3d1d638.jpeg)
