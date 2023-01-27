@@ -1,4 +1,4 @@
-import Banner from "../Assets/img/Banner.jpg";
+import Banner from "../Assets/img/Sekolah.jpg";
 import Banner2 from "../Assets/img/Banner2.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -20,7 +20,7 @@ export const HomePage = () => {
     <>
       <div
         style={{ backgroundImage: `url(${Banner})` }}
-        className="h-[80vh] bg-cover bg-[45%_55%] bg-no-repeat py-[130px] flex flex-col items-center"
+        className=" relative h-[80vh] bg-cover bg-[45%_55%] bg-no-repeat py-[130px] flex flex-col items-center "
       >
         <h1 className="text-2xl text-center text-white uppercase font-roboto font-bold">
           Welcome to SD Negeri Lokasari Website

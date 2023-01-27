@@ -2,7 +2,7 @@ import { gql } from "@apollo/client";
 
 export const EDIT_ARTICLE = gql`
   mutation EditArticle(
-    $id: Int
+    $id: uuid
     $artikel_content: String
     $artikel_title: String
     $author: String
